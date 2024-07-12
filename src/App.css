@@ -1,0 +1,53 @@
+body {
+	background: #141414;
+	color: #ffffff;
+}
+
+.movie-app > .row {
+	overflow-x: auto;
+	flex-wrap: nowrap;
+}
+
+.image-container {
+	position: relative;
+	width: 200px; /* Adjust as needed */
+	height: 300px; /* Adjust as needed */
+	transition: transform 0.2s;
+	margin: 5px; /* Reduce margin to decrease spacing */
+}
+
+.image-container img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover; /* Ensure the image covers the container */
+}
+
+.image-container:hover {
+	cursor: pointer;
+	transform: scale(1.1);
+}
+
+.image-container:hover .overlay {
+	opacity: 1;
+}
+
+.overlay {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	background: rgba(0, 0, 0, 0.8);
+	width: 100%;
+	height: 50px; /* Fixed height for the overlay */
+	transition: 0.5s ease;
+	opacity: 0;
+	font-size: 14px; /* Adjust font-size for better fit */
+	padding: 10px; /* Adjust padding for better fit */
+	box-sizing: border-box; /* Ensure padding is included in width */
+	white-space: nowrap; /* Prevent text from wrapping */
+	overflow: hidden; /* Hide overflow if text is too long */
+	text-overflow: ellipsis; /* Add ellipsis if text overflows */
+	display: flex; /* Center content using flexbox */
+	align-items: center;
+	justify-content: center;
+	color: #ffffff; /* Ensure text color is white */
+}
